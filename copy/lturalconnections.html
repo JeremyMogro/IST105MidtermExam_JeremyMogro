@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Connections Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, I'm Jeremy Mogro </h1>
+        <img src="Jeremy.png" alt="Your Photo">
+        <h2>Welcome to my Cultural Connections Page!</h2>
+
+        <h3>Cultural Description</h3>
+        <h4>Top Two Cultural Shocks in Vancouver:</h4>
+        <ul>
+            <li>1. Vancouver have a large amount of people for all around the world </li>
+            <li>2. The security of Vancouver it's very amazing</li>
+        </ul>
+
+        <h4>Top Two Things I Miss Most from Ecuador:</h4>
+        <ul>
+            <li>1. My family is a very key part from my life that's why it's the thing the I miss the most. </li>
+            <li>2. One important thing that miss from Ecuador is the amazing food we have, but I miss more the typical food call " Bolon mixto".</li>
+        </ul>
+
+        <h4>Amazing New Things I Love About Vancouver/Canada:</h4>
+        <ul>
+            <li>1. The first thing that make's me love this city is the variety of food you can find on the street, basically from every country of the world.</li>
+            <li>2. Climate is something that impress me a lot about Vancouver, special the autumn, every part of the city turn's beautiful </li>
+        </ul>
+        <h4> Personal gol in Vancouver:</h4>
+        <ul>
+            <li>1. The first thing that make's me love this city is the variety of food you can find on the street, basically from every country of the world.</li>
+            <li>2. Climate is something that impress me a lot about Vancouver, special the autumn, every part of the city turn's beautiful </li>
+        </ul>
+    </div>
+
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Check if user is authenticated
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in, do nothing
+            } else {
+                // No user is signed in, redirect to login page
+                window.location.href = "index.html"; // Change to your login page
+            }
+        });
+    </script>
+</body>
+</html>
